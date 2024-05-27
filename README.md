@@ -1,27 +1,45 @@
-# AngularNews
+# Angular Hírportál
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## Áttekintés
+Ez a projekt egy Angular alapú hírportál, amely a főoldalon fontos híreket jelenít meg, valamint egy keresési funkciót kínál egy külön oldalon a NewsAPI használatával. Az alkalmazás Angular service-eket, HTTP kliens API hívásokat és routingot használ a navigációhoz.
 
-## Development server
+## Funkciók
+- **Főoldal**: A legfontosabb hírek megjelenítése.
+- **Keresőoldal**: Hírek keresése kulcsszavak alapján.
+- **NewsAPI integráció**: Hírek lekérése a NewsAPI segítségével.
+- **Routing**: Navigáció a főoldal és a kereső oldal között.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Előfeltételek
+- Node.js
+- Angular CLI
 
-## Code scaffolding
+## Telepítés
+1. **Repo klónozása**:
+   ```bash
+   git clone
+   cd
+   ```
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+2. **Függőségek telepítése**:
+   ```bash
+   npm install
+   ```
 
-## Build
+## Az alkalmazás futtatása
+A fejlesztői szerver indítása:
+```bash
+ng serve
+```
+Nyisd meg a `http://localhost:4200/` címet. Az alkalmazás automatikusan újratöltődik, ha megváltoztatod a forrásfájlokat.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Projekt struktúra
+- **src/app**: Tartalmazza a fő alkalmazáskódot.
+  - **services/news.service.ts**: A NewsAPI hívások kezeléséért felelős.
+  - **components**: Az alkalmazás összes komponensét tartalmazza.
+    - **news-list**: A főoldalon a fontos hírek megjelenítésére szolgáló komponens.
+    - **news-search**: A keresési funkciót megvalósító komponens.
+  - **app-routing.module.ts**: Az alkalmazás útvonalait határozza meg.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Használat
+1. **Főoldal**: Top hírek listája jelenik meg.
+2. **Keresőoldal**: Írd be a keresési kifejezést és kattints a keresés gombra az eredmények megjelenítéséhez.
